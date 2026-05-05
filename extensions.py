@@ -109,3 +109,23 @@ class TourBookingExtension(ModelExtension):
             'message': f'Exported {len(partners)} partner(s)',
             'data': {'pdf_url': url, 'filename': filename},
         }
+
+
+
+
+
+
+
+class ConversationExtension(ModelExtension):
+    _inherit = 'chat.conversation'
+
+    def advance_lead_on_first_summary(self):
+        """Advance the partner's latest CRM lead from stage 1 → 2 on first summarization."""
+        from modules.crm.models.lead import Lead
+        partner = self.social_partner
+        if not partner:
+            return
+        latest_lead = partner.leads.order_by('-created_at').first()
+        if latest_lead and latest_lead.stage_id == 1:
+            latest_lead.stage_id = 2
+            latest_lead.save()
