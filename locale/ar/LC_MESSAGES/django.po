@@ -11,8 +11,49 @@ msgstr ""
 msgid "\nthis is the maalem module\n"
 msgstr ""
 
+msgid "Additional Phone"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Additional Phone"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Age"
+msgstr ""
+
+msgid "Date of Birth"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Date of Birth"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Demographics"
+msgstr ""
+
 msgctxt "ui/views/views.py"
 msgid "Email Address"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Enter national or civil ID"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Enter passport number"
+msgstr ""
+
+msgctxt "ui/views/tourbooking_list_patch.py"
+msgid "Export Partners (Excel)"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Female"
 msgstr ""
 
 msgctxt "ui/views/views.py"
@@ -23,12 +64,53 @@ msgctxt "ui/views/views.py"
 msgid "Last Login"
 msgstr ""
 
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Male"
+msgstr ""
+
 msgctxt "ui/views/views.py"
 msgid "Name"
 msgstr ""
 
+msgid "National ID / Civil ID"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "National ID / Civil ID"
+msgstr ""
+
+msgid "Passport Expiry Date"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Passport Expiry Date"
+msgstr ""
+
+msgid "Passport Number"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Passport Number"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Personal Info"
+msgstr ""
+
 msgctxt "ui/views/views.py"
 msgid "Phone"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "The gender associated with this partner"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Unknown"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "gender"
 msgstr ""
 
 msgid "maalem"

@@ -80,6 +80,15 @@ partner_form_maalem_patch = {
                                             "widget": "date",
                                             "required": False,
                                         },
+                                        {
+                                            "name": "source",
+                                            "string": _("Source"),
+                                            "widget": "relation",
+                                            "required": False,
+                                            "placeholder": _("How did this contact reach us?"),
+                                            "multiSelect": False,
+                                            "creatable": True,
+                                        },
                                     ]
                                 }
                             ]

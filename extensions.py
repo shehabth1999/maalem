@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from io import BytesIO
 from modules.base.model_inheritance import ModelExtension
-from modules.base.decorators import onchange, action
+from modules.base.decorators import action
 from django.db import models
 from django.core.files.base import ContentFile
 from django.core.files.storage import default_storage
@@ -18,35 +18,16 @@ class PartnerExtension(ModelExtension):
     additional_phone = models.CharField(
         _("Additional Phone"), max_length=20, blank=True, null=True
     )
-    date_of_birth = models.DateField(
-        _("Date of Birth"), blank=True, null=True
-    )
-    passport_expiry_date = models.DateField(
-        _("Passport Expiry Date"), blank=True, null=True
-    )
-    national_id = models.CharField(
-        _("National ID / Civil ID"), max_length=50, blank=True, null=True
-    )
-    passport_number = models.CharField(
-        _("Passport Number"), max_length=50, blank=True, null=True
-    )
-    age = models.IntegerField(_("Age"), blank=True, null=True)
 
-    @onchange('date_of_birth')
-    def _onchange_date_of_birth(self):
-        from datetime import date as _date
-        dob = self.date_of_birth
-        if isinstance(dob, str) and dob:
-            try:
-                dob = _date.fromisoformat(dob[:10])
-            except ValueError:
-                self.age = None
-                return
-        if dob:
-            today = timezone.now().date()
-            self.age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-        else:
-            self.age = None
+    source = models.ForeignKey(
+        'maalem.Source',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='partners',
+        verbose_name=_("Source"),
+        help_text=_("Where this partner came from (referral, walk-in, website, agent, ad campaign, ...)"),
+    )
 
 
 EXPORT_HEADERS = ['passport_number', 'name', 'birth_date', 'phone', 'gender', 'national_id']
