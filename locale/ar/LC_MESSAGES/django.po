@@ -43,6 +43,31 @@ msgctxt "ui/views/partner_form_patch.py"
 msgid "Demographics"
 msgstr "البيانات الديموغرافية"
 
+msgid "Additional Phone"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Additional Phone"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Age"
+msgstr ""
+
+msgid "Date of Birth"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Date of Birth"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Demographics"
+msgstr ""
+
 msgctxt "ui/views/views.py"
 msgid "Email Address"
 msgstr "البريد الإلكتروني"
@@ -63,6 +88,22 @@ msgctxt "ui/views/partner_form_patch.py"
 msgid "Female"
 msgstr "أنثى"
 
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Enter national or civil ID"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Enter passport number"
+msgstr ""
+
+msgctxt "ui/views/tourbooking_list_patch.py"
+msgid "Export Partners (Excel)"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Female"
+msgstr ""
+
 msgctxt "ui/views/views.py"
 msgid "ID"
 msgstr "المعرف"
@@ -74,6 +115,10 @@ msgstr "آخر تسجيل دخول"
 msgctxt "ui/views/partner_form_patch.py"
 msgid "Male"
 msgstr "ذكر"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Male"
+msgstr ""
 
 msgctxt "ui/views/views.py"
 msgid "Name"
@@ -104,6 +149,31 @@ msgctxt "ui/views/partner_form_patch.py"
 msgid "Personal Info"
 msgstr "المعلومات الشخصية"
 
+msgid "National ID / Civil ID"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "National ID / Civil ID"
+msgstr ""
+
+msgid "Passport Expiry Date"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Passport Expiry Date"
+msgstr ""
+
+msgid "Passport Number"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Passport Number"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Personal Info"
+msgstr ""
+
 msgctxt "ui/views/views.py"
 msgid "Phone"
 msgstr "الهاتف"
@@ -119,6 +189,18 @@ msgstr "غير معروف"
 msgctxt "ui/views/partner_form_patch.py"
 msgid "gender"
 msgstr "الجنس"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "The gender associated with this partner"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Unknown"
+msgstr ""
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "gender"
+msgstr ""
 
 msgid "maalem"
 msgstr "معالم"
