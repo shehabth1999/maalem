@@ -26,6 +26,8 @@ htmlcov/
 *.pid
 *.pot
 *.mo
+# ...but compiled translation catalogs ARE shipped (nothing compiles them on deploy)
+!locale/**/*.mo
 sessions/
 filestore/
 

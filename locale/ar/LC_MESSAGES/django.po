@@ -18,6 +18,10 @@ msgctxt "ui/views/tourbooking_form_patch.py"
 msgid "Accommodation Type"
 msgstr "نوع التسكين"
 
+msgctxt "ui/views/source_views.py"
+msgid "Active"
+msgstr "نشط"
+
 msgid "Additional Phone"
 msgstr "هاتف إضافي"
 
@@ -31,6 +35,14 @@ msgstr "العمر"
 msgctxt "ui/views/partner_form_patch.py"
 msgid "Age"
 msgstr "العمر"
+
+msgctxt "ui/views/source_views.py"
+msgid "Created"
+msgstr "تاريخ الإنشاء"
+
+msgctxt "ui/views/source_views.py"
+msgid "Creation date"
+msgstr "تاريخ الإنشاء"
 
 msgid "Date of Birth"
 msgstr "تاريخ الميلاد"
@@ -43,34 +55,20 @@ msgctxt "ui/views/partner_form_patch.py"
 msgid "Demographics"
 msgstr "البيانات الديموغرافية"
 
-msgid "Additional Phone"
-msgstr ""
+msgid "Description"
+msgstr "الوصف"
 
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Additional Phone"
-msgstr ""
-
-msgid "Age"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Age"
-msgstr ""
-
-msgid "Date of Birth"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Date of Birth"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Demographics"
-msgstr ""
+msgctxt "ui/views/source_views.py"
+msgid "Description"
+msgstr "الوصف"
 
 msgctxt "ui/views/views.py"
 msgid "Email Address"
 msgstr "البريد الإلكتروني"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Enter additional phone number"
+msgstr "أدخل رقم هاتف إضافي"
 
 msgctxt "ui/views/partner_form_patch.py"
 msgid "Enter national or civil ID"
@@ -89,22 +87,14 @@ msgid "Female"
 msgstr "أنثى"
 
 msgctxt "ui/views/partner_form_patch.py"
-msgid "Enter national or civil ID"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Enter passport number"
-msgstr ""
-
-msgctxt "ui/views/tourbooking_list_patch.py"
-msgid "Export Partners (Excel)"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Female"
-msgstr ""
+msgid "How did this contact reach us?"
+msgstr "كيف وصلت إلينا جهة الاتصال هذه؟"
 
 msgctxt "ui/views/views.py"
+msgid "ID"
+msgstr "المعرف"
+
+msgctxt "ui/views/source_views.py"
 msgid "ID"
 msgstr "المعرف"
 
@@ -116,20 +106,30 @@ msgctxt "ui/views/partner_form_patch.py"
 msgid "Male"
 msgstr "ذكر"
 
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Male"
-msgstr ""
-
 msgctxt "ui/views/views.py"
 msgid "Name"
 msgstr "الاسم"
 
+msgctxt "ui/views/source_views.py"
+msgid "Name of the partner source"
+msgstr "اسم مصدر جهة الاتصال"
+
 msgid "National ID / Civil ID"
 msgstr "الرقم الوطني / رقم الهوية المدنية"
 
 msgctxt "ui/views/partner_form_patch.py"
 msgid "National ID / Civil ID"
 msgstr "الرقم الوطني / رقم الهوية المدنية"
+
+msgctxt "ui/views/source_views.py"
+msgid "Optional description"
+msgstr "وصف اختياري"
+
+msgid "Partner Source"
+msgstr "مصدر جهة الاتصال"
+
+msgid "Partner Sources"
+msgstr "مصادر جهات الاتصال"
 
 msgid "Passport Expiry Date"
 msgstr "تاريخ انتهاء جواز السفر"
@@ -149,34 +149,23 @@ msgctxt "ui/views/partner_form_patch.py"
 msgid "Personal Info"
 msgstr "المعلومات الشخصية"
 
-msgid "National ID / Civil ID"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "National ID / Civil ID"
-msgstr ""
-
-msgid "Passport Expiry Date"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Passport Expiry Date"
-msgstr ""
-
-msgid "Passport Number"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Passport Number"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Personal Info"
-msgstr ""
-
 msgctxt "ui/views/views.py"
 msgid "Phone"
 msgstr "الهاتف"
+
+msgid "Source"
+msgstr "المصدر"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Source"
+msgstr "المصدر"
+
+msgid "Source Name"
+msgstr "اسم المصدر"
+
+msgctxt "ui/views/source_views.py"
+msgid "Source Name"
+msgstr "اسم المصدر"
 
 msgctxt "ui/views/partner_form_patch.py"
 msgid "The gender associated with this partner"
@@ -186,25 +175,23 @@ msgctxt "ui/views/partner_form_patch.py"
 msgid "Unknown"
 msgstr "غير معروف"
 
+msgid "Where this partner came from (referral, walk-in, website, agent, ad campaign, ...)"
+msgstr "مصدر وصول جهة الاتصال (ترشيح، زيارة مباشرة، الموقع الإلكتروني، وكيل، حملة إعلانية، ...)"
+
+msgctxt "ui/views/source_views.py"
+msgid "Whether this source is active"
+msgstr "ما إذا كان هذا المصدر نشطًا"
+
+msgctxt "ui/views/source_views.py"
+msgid "e.g. Walk-in, Referral, Website"
+msgstr "مثال: زيارة مباشرة، ترشيح، الموقع الإلكتروني"
+
 msgctxt "ui/views/partner_form_patch.py"
 msgid "gender"
 msgstr "الجنس"
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "The gender associated with this partner"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "Unknown"
-msgstr ""
-
-msgctxt "ui/views/partner_form_patch.py"
-msgid "gender"
-msgstr ""
 
 msgid "maalem"
 msgstr "معالم"
 
 msgid "this is the maalem module"
 msgstr "هذه هي وحدة معالم"
-
