@@ -9,31 +9,120 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 msgid "\nthis is the maalem module\n"
-msgstr ""
+msgstr "\nهذه هي وحدة معالم\n"
+
+msgid "Accommodation Type"
+msgstr "نوع التسكين"
+
+msgctxt "ui/views/tourbooking_form_patch.py"
+msgid "Accommodation Type"
+msgstr "نوع التسكين"
+
+msgid "Additional Phone"
+msgstr "هاتف إضافي"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Additional Phone"
+msgstr "هاتف إضافي"
+
+msgid "Age"
+msgstr "العمر"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Age"
+msgstr "العمر"
+
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Demographics"
+msgstr "البيانات الديموغرافية"
 
 msgctxt "ui/views/views.py"
 msgid "Email Address"
-msgstr ""
+msgstr "البريد الإلكتروني"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Enter national or civil ID"
+msgstr "أدخل الرقم الوطني أو رقم الهوية المدنية"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Enter passport number"
+msgstr "أدخل رقم جواز السفر"
+
+msgctxt "ui/views/tourbooking_list_patch.py"
+msgid "Export Partners (Excel)"
+msgstr "تصدير جهات الاتصال (Excel)"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Female"
+msgstr "أنثى"
 
 msgctxt "ui/views/views.py"
 msgid "ID"
-msgstr ""
+msgstr "المعرف"
 
 msgctxt "ui/views/views.py"
 msgid "Last Login"
-msgstr ""
+msgstr "آخر تسجيل دخول"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Male"
+msgstr "ذكر"
 
 msgctxt "ui/views/views.py"
 msgid "Name"
-msgstr ""
+msgstr "الاسم"
+
+msgid "National ID / Civil ID"
+msgstr "الرقم الوطني / رقم الهوية المدنية"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "National ID / Civil ID"
+msgstr "الرقم الوطني / رقم الهوية المدنية"
+
+msgid "Passport Expiry Date"
+msgstr "تاريخ انتهاء جواز السفر"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Passport Expiry Date"
+msgstr "تاريخ انتهاء جواز السفر"
+
+msgid "Passport Number"
+msgstr "رقم جواز السفر"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Passport Number"
+msgstr "رقم جواز السفر"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Personal Info"
+msgstr "المعلومات الشخصية"
 
 msgctxt "ui/views/views.py"
 msgid "Phone"
-msgstr ""
+msgstr "الهاتف"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "The gender associated with this partner"
+msgstr "الجنس المرتبط بجهة الاتصال هذه"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "Unknown"
+msgstr "غير معروف"
+
+msgctxt "ui/views/partner_form_patch.py"
+msgid "gender"
+msgstr "الجنس"
 
 msgid "maalem"
-msgstr ""
+msgstr "معالم"
 
 msgid "this is the maalem module"
-msgstr ""
+msgstr "هذه هي وحدة معالم"
 

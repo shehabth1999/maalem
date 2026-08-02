@@ -57,6 +57,17 @@ class TourBookingExtension(ModelExtension):
     _inherit = 'tourism.tourbooking'
     _depends = ['tourism', 'maalem']
 
+    # Informational only: lets the agent pick the bedding/occupancy type on the
+    # booking header. Same catalog the hotel lines use, no pricing/logic impact.
+    accommodation_type = models.ForeignKey(
+        'tourism.AccommodationType',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='maalem_tour_bookings',
+        verbose_name=_("Accommodation Type"),
+    )
+
     @action
     def action_export_partners_excel(queryset):
         seen = set()
