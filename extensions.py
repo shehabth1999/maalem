@@ -38,17 +38,6 @@ class TourBookingExtension(ModelExtension):
     _inherit = 'tourism.tourbooking'
     _depends = ['tourism', 'maalem']
 
-    # Informational only: lets the agent pick the bedding/occupancy type on the
-    # booking header. Same catalog the hotel lines use, no pricing/logic impact.
-    accommodation_type = models.ForeignKey(
-        'tourism.AccommodationType',
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name='maalem_tour_bookings',
-        verbose_name=_("Accommodation Type"),
-    )
-
     @action
     def action_export_partners_excel(queryset):
         seen = set()
@@ -110,14 +99,32 @@ class TourBookingExtension(ModelExtension):
 
 class ConversationExtension(ModelExtension):
     _inherit = 'chat.conversation'
+    _depends = ['chat', 'crm', 'maalem']
 
     def advance_lead_on_first_summary(self):
-        """Advance the partner's latest CRM lead from stage 1 → 2 on first summarization."""
-        from modules.crm.models.lead import Lead
+        """Move the partner's latest CRM lead out of the first pipeline stage on first summarization."""
+        from django.db.models import Q
+        from modules.crm.models.lead import Stage
+
         partner = self.social_partner
         if not partner:
             return
         latest_lead = partner.leads.order_by('-created_at').first()
-        if latest_lead and latest_lead.stage_id == 1:
-            latest_lead.stage_id = 2
+        if not latest_lead or not latest_lead.stage_id:
+            return
+
+        current = latest_lead.stage
+        # Stages are company-scoped and ordered by `sequence`; their pks are whatever
+        # the tenant DB allocated, so first/next has to be resolved by sequence.
+        stages = Stage.all_objects.filter(company_id=current.company_id).order_by('sequence', 'id')
+        first = stages.first()
+        if not first or first.pk != current.pk:
+            return  # only a lead still sitting in the very first stage advances
+
+        following = stages.filter(
+            Q(sequence__gt=current.sequence)
+            | Q(sequence=current.sequence, id__gt=current.id)
+        ).first()
+        if following:
+            latest_lead.stage = following
             latest_lead.save()
