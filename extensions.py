@@ -8,6 +8,9 @@ from django.core.files.storage import default_storage
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 from openpyxl import Workbook
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class PartnerExtension(ModelExtension):
@@ -128,3 +131,37 @@ class ConversationExtension(ModelExtension):
         if following:
             latest_lead.stage = following
             latest_lead.save()
+
+
+class LeadExtension(ModelExtension):
+    """Website leads (WordPress → /api/v1/crm/lead/) get a seller and a notification.
+
+    See maalem/services/website_lead.py. Both hooks swallow their own errors:
+    the website's POST must always get its 201.
+    """
+    _inherit = 'crm.lead'
+    _depends = ['crm', 'whatsapp', 'maalem']
+
+    def pre_create(self):
+        from maalem.services import website_lead
+
+        self._website_seller = None
+        self._website_same_customer = False
+        try:
+            if not website_lead.is_website_lead(self):
+                return
+            seller, same_customer = website_lead.pick_seller(self)
+            if seller is None:
+                return
+            self.assigned_to = seller  # Lead.pre_save syncs the team from this
+            self._website_seller = seller
+            self._website_same_customer = same_customer
+        except Exception:  # noqa: BLE001
+            logger.exception('website lead: assignment failed')
+
+    def post_create(self):
+        seller = getattr(self, '_website_seller', None)
+        if seller is None:
+            return
+        from maalem.services import website_lead
+        website_lead.notify(self, seller, same_customer=getattr(self, '_website_same_customer', False))
